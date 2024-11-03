@@ -1,0 +1,192 @@
+/*style formatting start here*/
+
+body {
+    background-color: #f5f2e8;
+  }
+
+  header {
+    background-color: #442c20;
+    color: #ffffff;
+    padding: 20px;
+  }
+
+  ul {
+    position: sticky;
+    top: 0;
+    background-color: #442c20;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0;
+  }
+
+  footer {
+    background-color: #442c20;
+    color: #ffffff;
+    padding: 10px;
+    font-family: "Figtree", sans-serif;
+    font-size: 14px;
+  }
+
+  body {
+    color: #3d3d3d;
+  }
+
+  /*.navbar {
+    background-color: #4E3527;
+    color: #ffffff;
+    padding: 10px;
+    margin: 0;
+    display: flex;
+    justify-content: flex-end;
+        
+  }
+  
+  .navbar li {
+    list-style: none;
+    margin-left: 10px;
+  }
+  
+  .navbar li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-family:Tahoma;
+    font-size:20px;
+  }
+  
+  .navbar li a:hover {
+    text-decoration: underline;
+  }
+  
+  .navbar li.active a {
+    font-weight: bold;
+  }*/
+
+ /* Existing styles */
+/* Existing styles */
+/* Existing styles */
+/* Existing styles */
+nav {
+  background-color: #4E3527;
+  color: #ffffff;
+  padding: 10px;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky; /* Fix the loss of a sticky navbar */
+  top: 0;
+}
+
+.social-icons {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-icons ul,
+.nav-links ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #4E3527;
+}
+
+.social-icons li,
+.nav-links li {
+  margin-right: 10px;
+}
+
+.social-icons a,
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: "Figtree", sans-serif;
+  font-size: 20px;
+}
+
+.social-icons a,
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-family: 'Roboto', sans-serif;
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.social-icons a:hover,
+.nav-links a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  font-family: "Cantata One", serif;
+  font-size: 36pt;
+}
+
+h2 {
+  font-family: "Cantata One", serif;
+  font-size: 22pt;
+  font-weight: bold;
+  color: #938074;
+}
+
+p {
+  font-family: "Figtree", sans-serif;
+  font-size: 14pt;
+  color: #938074;
+}
+
+/* Dropdown menu styles */
+.dropbtn {
+  background-color: #4E3527; /* Match the nav background color */
+  color: white;  
+  font-size: 20px; /* Match the font size of nav links */
+  font-family: "Figtree", sans-serif; /* Match the font family of nav links */
+  border: none;
+  cursor: pointer;
+  vertical-align: middle; /* Align with other nav items */
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #5a3e2e; /* Slightly lighter color than the nav bar */
+}
+
+hr {
+  height: 5px; /* Adjust the height to make the line thicker */
+  background-color: #5a3e2e; /* Change the color if needed */
+   border: none; /* Remove the default border */
+}

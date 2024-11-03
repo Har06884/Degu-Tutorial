@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <style>
+      
+        /* Accordion styles */
+        .accordion {
+            background-color: #4E3527;
+            color: white;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            text-align: left;
+            font-size: 20px;
+            border: none;
+            outline: none;
+            transition: 0.4s;
+            margin-bottom: 10px; /* Add margin between accordions */
+            border-radius: 10px; /* Add rounded corners */
+        }
+
+        .active, .accordion:hover {
+            background-color: #5a3e2e;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: #f5f2e8;
+            overflow: hidden;
+            border-radius: 0 0 10px 10px; /* Add rounded corners to the bottom */
+        }
+
+        .panel iframe {
+            width: 100%;
+            height: 200px; /* Adjust height to fit perfectly */
+        }
+
+        /* Center the accordion on the page */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="social-icons">
+            <ul>
+                <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                <li><a href="#"><i class="fab fa-x-twitter fa-flip"></i></a></li>
+                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                <li><a href="#"><i class="fab fa-discord"></i></a></li>
+                <li><a href="#"><i class="fa-brands fa-snapchat"></i></a></li>
+            </ul>
+        </div>
+        
+        <div class="nav-links">
+            <ul class="navbar">
+                <li><a href="./index.html">Home</a></li>
+                <li><a href="./about.html">About</a></li>
+                <li class="dropdown">
+                    <button class="dropbtn">Gallery</button>
+                    <div class="dropdown-content">
+                        <a href="./gallery.html">Gallery 1</a>
+                        <a href="#">Gallery 2</a>
+                        <a href="#">Gallery 3</a>
+                    </div>
+                </li>
+                <li><a href="./video.html">Videos</a></li>
+                <li><a href="./contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    <header>
+        <h1>Videos</h1>
+    </header>
+    
+    <main>
+        <button class="accordion">About This Page</button>
+        <div class="panel">
+                <p>
+                    Welcome to our video page! Here, you'll discover a diverse collection of videos that highlight various aspects of our content.
+                    Whether you're interested in in-depth tutorials, comprehensive reviews, or exciting event highlights, we have something for everyone.                
+                    Our videos are designed to inform, entertain, and inspire.
+                </p>
+            <hr>
+                <p>
+                    Click on the sections below to start exploring our extensive video library.
+                </p>
+            
+
+        </div>
+
+        <button class="accordion">Degu Cage Setup</button>
+        <div class="panel">
+            <iframe src="https://www.youtube.com/embed/cMDiCRNFXkU?si=GOuq5eVpTdwnNCAY" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <button class="accordion">Do Degu Make Good Pets</button>
+        <div class="panel">
+            <iframe src="https://www.youtube.com/embed/K06DmfBluiw?si=4YEvCEasYD_x-Cco" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <button class="accordion">Degu Introduction</button>
+        <div class="panel">
+            <iframe src="https://www.youtube.com/embed/c3M8MzeI1KU?si=nXgC1of-WEN5ejQ1" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+
+        <button class="accordion">Pro's and Con's of Degu</button>
+        <div class="panel">
+            <iframe src="https://www.youtube.com/embed/PLuDnlTjMn8?si=v5SvG9TiW-59uSQN" title="YouTube video player"  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        </div>
+    </main>
+    <footer>
+        <p>© 2024 Degu Website. All rights reserved.</p>
+    </footer>
+
+    <script src="./js/accordion.js"></script>
+</body>
+</html>

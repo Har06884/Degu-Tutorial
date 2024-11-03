@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantata+One&family=Figtree:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <style>
+        .gallery-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            padding: 20px;
+        }
+        .gallery-item {
+            flex: 1 1 calc(33.333% - 20px);
+            margin: 10px;
+            cursor: pointer;
+            overflow: hidden; /* Ensure images fit within their containers */
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Ensure images cover the container without stretching */
+            border-radius: 10px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        .modal-content {
+            margin: 15% auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        .close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #fff;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    
+        <nav>
+            <div class="social-icons">
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+                    <li><a href="#"><i class="fab fa-x-twitter fa-flip"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-tiktok"></i></a></li>
+                    <li><a href="#"><i class="fab fa-discord"></i></a></li>
+                    <li><a href="#"><i class="fa-brands fa-snapchat"></i></a></li>
+                </ul>
+            </div>
+            
+            <div class="nav-links">
+                <ul class="navbar">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li class="dropdown">
+                        <button class="dropbtn">Gallery</button>
+                        <div class="dropdown-content">
+                            <a href="./gallery.html">Gallery 1</a>
+                            <a href="#">Gallery 2</a>
+                            <a href="#">Gallery 3</a>
+                        </div>
+                    </li>
+                    <li><a href="./video.html">Videos</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    
+    <header>
+        <h1>Gallery</h1>
+    </header>
+    
+    <main>
+                   
+            <div class="gallery-container">
+                <div class="gallery-item">
+                    <img src="./img/black1.jpg" alt="Degu Image 1" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/blue1.jpg" alt="Degu Image 2" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/champagnewagouti1.jpg" alt="Degu Image 3" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/chocolate1.png" alt="Degu Image 4" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/chocolate2.jpg" alt="Degu Image 5" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/sand1.jpg" alt="Degu Image 6" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/cream1.png" alt="Degu Image 7" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/cream2.jpg" alt="Degu Image 8" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/lilac1.jpg" alt="Degu Image 9" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/mischief.jpg" alt="Degu Image 10" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/naturalagouti.jpg" alt="Degu Image 11" onclick="openModal(this)">
+                </div>
+                <div class="gallery-item">
+                    <img src="./img/peanut1.jpg" alt="Degu Image 12" onclick="openModal(this)">
+                </div>
+            </div>
+        
+    </main>
+    <footer>
+        <p>© 2024 Degu Website. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal for enlarged image -->
+    <div id="myModal" class="modal">
+        <span class="close" onclick="closeModal()">×</span>
+        <img class="modal-content" id="img01">
+    </div>
+
+    <script>
+        function openModal(element) {
+            //
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            modal.style.display = "block";
+            modalImg.src = element.src;
+        }
+
+        function closeModal() {
+            var modal = document.getElementById("myModal");
+            modal.style.display = "none";
+        }
+    </script>
+</body>
+</html>
